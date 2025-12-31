@@ -31,10 +31,10 @@ import {
 import { PricingLane, IntegrityPoint } from './types';
 
 const IndustrialMesh = () => (
-  <svg className="absolute opacity-[0.02] pointer-events-none w-full h-full inset-0" viewBox="0 0 100 100" preserveAspectRatio="none">
+  <svg className="absolute opacity-[0.03] pointer-events-none w-full h-full inset-0" viewBox="0 0 100 100" preserveAspectRatio="none">
     <defs>
-      <pattern id="mesh" width="12" height="12" patternUnits="userSpaceOnUse">
-        <path d="M 12 0 L 0 0 0 12" fill="none" stroke="white" strokeWidth="0.05"/>
+      <pattern id="mesh" width="8" height="8" patternUnits="userSpaceOnUse">
+        <path d="M 8 0 L 0 0 0 8" fill="none" stroke="white" strokeWidth="0.03"/>
       </pattern>
     </defs>
     <rect width="100%" height="100%" fill="url(#mesh)" />
@@ -44,10 +44,10 @@ const IndustrialMesh = () => (
 const BrandLogo = ({ className = "w-10 h-10" }: { className?: string }) => (
   <div className={`relative flex items-center justify-center ${className}`}>
     <svg viewBox="0 0 100 100" className="w-full h-full">
-      <circle cx="50" cy="50" r="45" fill="none" stroke="#C83803" strokeWidth="2" strokeDasharray="141 141" strokeDashoffset="0" className="opacity-20" />
+      <circle cx="50" cy="50" r="45" fill="none" stroke="#C83803" strokeWidth="1" strokeDasharray="10 5" className="opacity-40 animate-[spin_20s_linear_infinite]" />
       <g transform="translate(15, 15) scale(0.7)">
-        <path d="M40 40 L10 10" stroke="#FFFFFF" strokeWidth="8" strokeLinecap="round" />
-        <circle cx="50" cy="50" r="30" fill="none" stroke="#FFFFFF" strokeWidth="8" />
+        <path d="M40 40 L10 10" stroke="#FFFFFF" strokeWidth="6" strokeLinecap="round" />
+        <circle cx="50" cy="50" r="30" fill="none" stroke="#FFFFFF" strokeWidth="6" />
         <rect x="35" y="55" width="8" height="15" fill="#FFFFFF" />
         <rect x="47" y="40" width="8" height="30" fill="#C83803" />
         <rect x="59" y="30" width="8" height="40" fill="#C83803" />
@@ -75,7 +75,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-700 ${scrolled ? 'bg-[#0B162A]/95 backdrop-blur-xl shadow-2xl py-4 border-b border-white/5' : 'bg-transparent py-10'}`}>
+    <nav className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-700 ${scrolled ? 'bg-[#0B162A]/90 backdrop-blur-2xl shadow-2xl py-4 border-b border-white/5' : 'bg-transparent py-10'}`}>
       <div className="max-w-7xl mx-auto px-8 flex justify-between items-center">
         <div className="flex items-center space-x-4 group cursor-pointer" onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})}>
           <BrandLogo className="w-10 h-10 group-hover:scale-110 transition-transform duration-500" />
@@ -100,7 +100,7 @@ const Navbar = () => {
           ))}
           <button 
             onClick={() => scrollToSection('pricing')}
-            className="bg-[#C83803] text-white px-8 py-3.5 rounded-none font-black hover:bg-white hover:text-[#0B162A] transition-all duration-500"
+            className="bg-[#C83803] text-white px-8 py-3.5 rounded-none font-black hover:bg-white hover:text-[#0B162A] transition-all duration-500 shadow-lg shadow-[#C83803]/10"
           >
             STEP ONTO THE PORCH
           </button>
@@ -571,4 +571,5 @@ const App: React.FC = () => {
   );
 };
 
+export default App;
 export default App;
