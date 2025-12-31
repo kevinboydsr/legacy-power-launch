@@ -1,4 +1,3 @@
-index.html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,7 +23,6 @@ index.html
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <style>
         :root {
-            /* Brand-aligned Chicago Bears "Industrial Luxury" palette */
             --brand-navy: #0B162A; 
             --brand-orange: #C83803; 
             --brand-orange-muted: #8E2902;
@@ -61,33 +59,27 @@ index.html
         .animate-float {
             animation: float 10s ease-in-out infinite;
         }
-        /* Custom scrollbar */
-        ::-webkit-scrollbar {
-            width: 6px;
-        }
-        ::-webkit-scrollbar-track {
-            background: var(--brand-navy);
-        }
-        ::-webkit-scrollbar-thumb {
-            background: var(--brand-grey);
-            border-radius: 0px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: var(--brand-orange);
-        }
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: var(--brand-navy); }
+        ::-webkit-scrollbar-thumb { background: var(--brand-grey); border-radius: 0px; }
+        ::-webkit-scrollbar-thumb:hover { background: var(--brand-orange); }
     </style>
 <script type="importmap">
 {
   "imports": {
-    "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
-    "react/": "https://esm.sh/react@^19.2.3/",
     "react": "https://esm.sh/react@^19.2.3",
-    "react-dom/": "https://esm.sh/react-dom@^19.2.3/"
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
+    "vite": "https://esm.sh/vite@^7.3.0",
+    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.2"
   }
 }
 </script>
 </head>
 <body>
     <div id="root"></div>
+    <!-- Entry Point for the Application -->
+    <script type="module" src="/index.tsx"></script>
 </body>
 </html>
