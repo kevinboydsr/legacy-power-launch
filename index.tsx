@@ -1,4 +1,34 @@
-// This file is no longer in use. All logic has been consolidated into index.tsx to ensure build stability.
+import React, { useState, useEffect, useMemo } from 'react';
+import ReactDOM from 'react-dom/client';
+import { 
+  MapPin, 
+  Rocket, 
+  Compass, 
+  Menu, 
+  X, 
+  History, 
+  Scale, 
+  Users, 
+  CheckCircle2, 
+  ShieldCheck, 
+  ArrowRight,
+  TrendingUp,
+  Award
+} from 'lucide-react';
+
+// --- Types ---
+interface PricingLane {
+  id: string;
+  name: string;
+  subtitle: string;
+  intent: string;
+  terms: string;
+  price: string;
+  priceNote?: string;
+  buttonText: string;
+  highlight?: boolean;
+  icon: React.ReactNode;
+  badge?: string;
 }
 
 // --- Components ---
