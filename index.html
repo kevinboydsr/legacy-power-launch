@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Foundation is Set | Legacy Power Local</title>
+    <title>The Foundation | Legacy Power Local</title>
     
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,7 +13,7 @@
         :root {
             --brand-navy: #0B162A; 
             --brand-orange: #C83803; 
-            --brand-orange-glow: rgba(200, 56, 3, 0.3);
+            --brand-orange-glow: rgba(200, 56, 3, 0.4);
         }
         body {
             font-family: 'Montserrat', sans-serif;
@@ -34,15 +34,15 @@
         }
         .glass-panel {
             background: rgba(255, 255, 255, 0.02);
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(30px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
-        @keyframes fade-in-up {
-            from { opacity: 0; transform: translateY(20px); }
+        @keyframes slide-up {
+            from { opacity: 0; transform: translateY(40px); }
             to { opacity: 1; transform: translateY(0); }
         }
-        .animate-entry { animation: fade-in-up 1s ease-out forwards; }
-        ::-webkit-scrollbar { width: 5px; }
+        .animate-slide-up { animation: slide-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+        ::-webkit-scrollbar { width: 4px; }
         ::-webkit-scrollbar-track { background: var(--brand-navy); }
         ::-webkit-scrollbar-thumb { background: var(--brand-orange); }
     </style>
